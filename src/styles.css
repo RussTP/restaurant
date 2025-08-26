@@ -1,0 +1,418 @@
+@font-face {
+    font-family: "alegreya-variablefont_wght-webfont";
+    src: url("./alegreya-variablefont_wght-webfont.woff2"),
+    url("./alegreya-variablefont_wght-webfont.woff");
+    font-style: normal;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "alegreya-variablefont_wght-webfont", sans-serif;
+}
+
+
+/* navbar home/menu/about*/
+nav {
+    display: flex;
+    position: fixed;
+    top:0;
+    left: 0;
+    right: 0;
+    align-items: center;
+    width: 100%;
+    height: 10rem;
+    gap: 20rem;
+    padding-top: 40px;
+    font-size: 1.5rem;
+    z-index: 100;
+   background-color: white;
+    font-family: "borel-regular-webfont", sans-serif;
+
+}
+
+details {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    
+    nav {
+        gap:2rem;
+        flex-wrap: wrap;
+        align-items: flex-end;
+        
+    }
+
+    #logo-container > h1 {
+        display: flex;
+        font-size: 1.5rem;
+        flex-wrap: wrap;
+        flex: 1 2 1rem;
+        flex-flow: row;
+    }
+    
+ #logo {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 70px;
+ }
+
+
+
+
+
+    details {
+        display: block;
+        flex-direction: column;
+        top: 0;
+        position: fixed;
+        font-family: "alegreya-variablefont_wght-webfont", sans-serif;
+        background-color: rgba(126, 123, 123, 0.404);
+        padding: 0.5rem; 
+        font-size: 1.5rem;
+        border: 2px solid rgba(233, 173, 6, 0.918);
+        z-index: 1005;
+
+    }
+
+    
+
+    details summary {
+        list-style: none;
+        
+    }
+
+    details summary::-webkit-details-marker {
+        display: none;
+    }
+
+    details:hover {
+        cursor: pointer;
+    }
+
+    #nav-btn-container {
+        display: flex;
+        position: fixed;
+        left: 0;
+        top: 43px;
+        width: 8rem;
+        background-color: rgba(126, 123, 123, 0.404); 
+        border: 2px solid rgba(233, 173, 6, 0.918);
+        align-items: center;
+        padding: 1.2rem;
+        gap: 1rem;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 1000;
+    }
+
+    #home-nav, #menu-nav, #about-nav {
+        width: 6rem;
+    }
+
+    #button-container > button {
+       display: none;
+    
+    }
+    
+}
+
+#logo-container {
+    display: flex;
+    flex: 1 1 400px;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 50px;
+    gap: 0.5rem;
+    max-width: 800px;
+
+
+}
+
+
+#logo {
+    display: flex;
+    width: 7rem;
+    min-width: 3rem;
+    height: auto;
+ 
+}
+
+#button-container {
+    display: flex;
+    margin-right: 1rem;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+
+button {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    background-color: rgb(233, 172, 6);
+    border: 1px solid white;
+    transition: all 0.5s ease;
+
+}
+
+button:hover {
+    color: rgb(233, 172, 6);
+       background-color: rgba(155, 142, 142, 0.400);
+       transition: all 0.5s ease;
+}
+
+
+#banner-container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 2rem;
+    padding: 5rem;
+    margin-top: 150px;
+    height: auto;
+    background-color: rgba(126, 123, 123, 0.103);
+    box-shadow: 2px 2px 3px 5px white;
+    
+}
+
+#text-container {
+    display: flex;
+    flex: 1 1 15rem;
+    max-width: 25rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(233, 172, 6);
+    border: 2px solid white;
+    box-shadow: 0 0 12px 5px rgb(233, 172, 6);
+    border-radius: 20%;
+    padding: 2rem; 
+
+}
+
+#text-container > button {
+    margin-top: 15px;
+    background-color: white;
+    transition: all 0.7s ease;
+}
+
+#text-container > button:hover {
+    margin-top: 15px;
+    background-color: rgb(67, 11, 223);
+}
+
+
+
+#text-container > p {
+    background-color: rgb(233, 172, 6);
+    border: 1px solid white;
+    box-shadow: 0 0 12px 5px rgb(233, 172, 6);
+    border-radius: 20%;
+    font-size:1.3rem;
+    padding: 10px;
+}
+
+#text-container > h2 {
+    margin-bottom: 15px;
+}
+
+
+
+ #food-image, #food-banner {
+    display: flex;
+    flex: 1 1 25rem;
+    max-width: 35rem;
+    min-width: 20rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10%;
+    border: 1px solid rgb(233, 172, 6);
+}
+
+/*Menu Page*/
+
+#menu-items {
+    display:block;
+    width: 100%;
+    margin-top: 150px;
+    height: auto;
+    padding: 3rem;
+    justify-content: center;
+    align-items: center;
+    background-color:rgba(126, 123, 123, 0.103);
+    text-align: center;
+
+
+}
+
+#card-container  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    border-radius: 50px;
+    margin-top: 2rem;
+    border: 2px solid white;
+    width: 100%;
+    height: auto;
+    padding: 2.5rem;
+    gap: 5rem;
+    flex-wrap: wrap;
+    background-color: rgb(233, 172, 6);
+    box-shadow: 0 0 12px 5px rgb(233, 172, 6);
+    margin: 0, auto;
+    z-index: -1;
+
+
+}
+
+ #carbona-card, #lasagna-card,
+#bruschetta-card, #aranacini-card, #pizza-card, #panini-card { 
+    display: block;
+    flex-basis: 100%;
+    border-radius: 30px;
+    border: 2px solid white;
+    max-width: 15rem;
+    height: auto;
+    background: linear-gradient(to right, rgb(231, 230, 230), rgba(146, 146, 146, 0.1));
+    opacity: 0.6;
+    z-index: 0;
+    
+}
+
+ #carbona-card:hover, #lasagna-card:hover,
+#bruschetta-card:hover, #aranacini-card:hover, #pizza-card:hover, #panini-card:hover{
+    max-width: 22rem;
+}
+
+.card-wrapper {
+    position: relative;
+    display: inline-block;
+    flex: 0 0 auto;
+    cursor: pointer;
+    transition: all 0.7s ease;
+}
+
+
+.card-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.7s ease;
+}
+
+
+
+.text-overlay {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 10;
+    background-color:rgba(70, 67, 67, 0.76);
+    border-radius: 30px;
+    border: 2px solid white;
+    font-size: 1.5rem;
+    font-family: "alegreya-variablefont_wght-webfont", sans-serif;
+}
+
+.text-overlay > p {
+    margin-top: 25%;
+    padding: 1.5rem;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid white;
+    background-color: rgba(70, 67, 67, 0.897);
+    border-radius: 30px;
+    color: white;
+}
+
+.text-overlay.active {
+    display: block;
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+.card-wrapper {
+    max-width: 19em;
+    margin: 0 auto;
+
+}
+
+.card-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+
+.text-overlay > p {
+    font-size: 1rem;
+    padding: 0.75rem;
+    line-height: 1.4;
+        
+    }
+
+
+}
+
+
+/*About Page*/
+
+#about-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    margin-top: 150px;
+    height: fit-content;
+}
+
+#about-card {
+    display: flex;
+    justify-content: center;
+    flex: 1 1 20rem;
+    align-items: center;
+    padding: 4rem;
+    min-width: 10rem;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    background-color: rgba(126, 123, 123, 0.103);
+}
+
+#about-card > h1 {
+    padding: 1rem;
+}
+
+
+
+#about-text {
+    flex-shrink: 1 1 15rem;
+    padding: 5rem;
+    max-width: 40rem;
+    font-size: 1.3rem;
+    background-color: rgb(233, 172, 6);
+    box-shadow: 0 0 12px 5px rgb(233, 172, 6);
+    border: 1px solid white;
+    border-radius: 20px;
+    
+}
+
