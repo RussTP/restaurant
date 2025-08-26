@@ -37,7 +37,7 @@ details {
     display: none;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 375px) and (max-width: 1024px) {
     
     nav {
         gap:2rem;
@@ -46,6 +46,13 @@ details {
         
     }
 
+
+    #text-container > h2{
+        font-size: 1.5rem;
+        padding: none;
+    }
+
+ 
     #logo-container > h1 {
         display: flex;
         font-size: 1.5rem;
@@ -57,7 +64,8 @@ details {
  #logo {
     width: 3rem;
     height: 3rem;
-    margin-left: 70px;
+    margin-left: 17%;
+   
  }
 
 
@@ -93,6 +101,9 @@ details {
         cursor: pointer;
     }
 
+    
+
+
     #nav-btn-container {
         display: flex;
         position: fixed;
@@ -117,6 +128,8 @@ details {
        display: none;
     
     }
+
+
     
 }
 
@@ -218,7 +231,7 @@ button:hover {
     border: 1px solid white;
     box-shadow: 0 0 12px 5px rgb(233, 172, 6);
     border-radius: 20%;
-    font-size:1.3rem;
+    font-size:1.2rem;
     padding: 10px;
 }
 
@@ -265,15 +278,14 @@ button:hover {
     border: 2px solid white;
     width: 100%;
     height: auto;
-    padding: 2.5rem;
-    gap: 5rem;
+    padding: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     background-color: rgb(233, 172, 6);
     box-shadow: 0 0 12px 5px rgb(233, 172, 6);
     margin: 0, auto;
     z-index: -1;
-
-
+    overflow: hidden;
 }
 
  #carbona-card, #lasagna-card,
@@ -287,12 +299,14 @@ button:hover {
     background: linear-gradient(to right, rgb(231, 230, 230), rgba(146, 146, 146, 0.1));
     opacity: 0.6;
     z-index: 0;
+
     
 }
 
  #carbona-card:hover, #lasagna-card:hover,
 #bruschetta-card:hover, #aranacini-card:hover, #pizza-card:hover, #panini-card:hover{
-    max-width: 22rem;
+    max-width: 20rem;
+    
 }
 
 .card-wrapper {
@@ -300,7 +314,7 @@ button:hover {
     display: inline-block;
     flex: 0 0 auto;
     cursor: pointer;
-    transition: all 0.7s ease;
+    
 }
 
 
@@ -347,13 +361,13 @@ button:hover {
 }
 
 
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
 
-.card-wrapper {
-    max-width: 19em;
-    margin: 0 auto;
-
+ .text-overlay.active, .card-wrapper  { 
+    max-width: 16.6rem;
+ 
 }
+
 
 .card-wrapper img {
     width: 100%;
@@ -365,7 +379,7 @@ button:hover {
 
 .text-overlay > p {
     font-size: 1rem;
-    padding: 0.75rem;
+    padding: 5px;
     line-height: 1.4;
         
     }
@@ -390,8 +404,8 @@ button:hover {
     justify-content: center;
     flex: 1 1 20rem;
     align-items: center;
-    padding: 4rem;
-    min-width: 10rem;
+    padding: 2rem;
+    min-width: 12rem;
     flex-direction: column;
     align-items: center;
     height: fit-content;
@@ -406,7 +420,7 @@ button:hover {
 
 #about-text {
     flex-shrink: 1 1 15rem;
-    padding: 5rem;
+    padding: 2rem;
     max-width: 40rem;
     font-size: 1.3rem;
     background-color: rgb(233, 172, 6);
