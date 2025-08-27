@@ -10,7 +10,7 @@ export function loadAboutPage() {
     aboutCard.innerHTML = `
     <h1>About us</h1>
     <div id="about-text">
-    <p>At Moon Over Moza (or whatever name you’re going with), we bring the warmth
+    <p>At Moon Over Moza, we bring the warmth
      and tradition of Italy to your table. Our kitchen is built on a passion for authenticity
     every dish is crafted with care, using time-honored recipes and fresh ingredients. 
     What truly sets us apart is our cheese, made from scratch in-house,

@@ -19,6 +19,9 @@ export function loadMenuPage () {
     const cardContainer = document.createElement("div");
     cardContainer.id = "card-container";
 
+ 
+
+
 
 
     function createCard(id, src, alt, overlayText) {
@@ -43,19 +46,29 @@ export function loadMenuPage () {
         wrapper.addEventListener("click", (event) => {
         event.stopPropagation();
 
-        const isActive = overlay.classList.contains("active");
 
-      if (isActive) {
-         overlay.classList.remove("active")      
-         img.style.maxWidth = ""; 
+        const isActive = overlay.classList.contains("active");
+      
+         document.querySelectorAll(".card-wrapper").forEach((card) => {
+         card.classList.remove("selected");
+         card.querySelector(".text-overlay").classList.remove("active");
+         card.querySelector("img").style.maxWidth = "";
+      });
+
+      if (!isActive) {
+         wrapper.classList.add("selected")
+         overlay.classList.add("active")       
+         document.body.classList.remove("no-hover")
      } else {
-        overlay.classList.add("active");   
-        img.style.maxWidth = "28rem"; 
+      document.body.classList.remove("no-hover")
      }
   });
-        document.addEventListener("click", () => {
+        document.addEventListener("click", (event) => {
+         if(!wrapper.contains(event.target)) {
+            wrapper.classList.remove("selected");
             overlay.classList.remove("active");
-            img.style.maxWidth = "";
+            document.body.classList.remove("no-hover");
+         }
     });
 
     return wrapper;
