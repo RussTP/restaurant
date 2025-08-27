@@ -47,7 +47,7 @@ export function loadMenuPage () {
         event.stopPropagation();
 
 
-        const isActive = overlay.classList.contains("active");
+        const isActive = overlay.classList.contains("selected");
       
          document.querySelectorAll(".card-wrapper").forEach((card) => {
          card.classList.remove("selected");
