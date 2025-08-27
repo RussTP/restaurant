@@ -76,7 +76,7 @@ export function loadMenuPage () {
 
     content.appendChild(menu);
     menu.appendChild(cardContainer);
-    const pizzaCard = createCard("pizza-card", pizza, "pizza image",  "$20 -- Our famous stone oven baked, authentic Italian style pizza, fresh ingredients, and cheese made from scratch.");
+    const pizzaCard = createCard("pizza-card", pizza, "pizza image",  "$20 -- Our famous stone oven baked, authentic Italian style pizza, fresh ingredients, and cheese made from scratch");
     cardContainer.appendChild(pizzaCard);
     cardContainer.appendChild(createCard("panini-card", panini, "panini image", "$12 -- Grilled Panini, fresh mozzarella cheese, tomatoes, prosciutto, and ham held together in a ciabatta"));
     cardContainer.appendChild(createCard("carbona-card", carbona, "carbona image", "$14 -- Authentic Carbona, made with fresh pasta, bacon, guanciale, and pecorino"));

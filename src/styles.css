@@ -37,7 +37,7 @@ details {
     display: none;
 }
 
-@media screen and (min-width: 375px) and (max-width: 1337px) and (orientation: portrait)   {
+@media screen and (min-width: 375px) and (max-width: 1366px) {
     
 
 
@@ -209,7 +209,7 @@ button:hover {
 #text-container {
     display: flex;
     flex: 1 1 15rem;
-    max-width: 25rem;
+    max-width: 35rem;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -240,8 +240,9 @@ button:hover {
     border: 1px solid white;
     box-shadow: 0 0 12px 5px rgb(233, 172, 6);
     border-radius: 20%;
+    min-width: 12rem;
     font-size:1.2rem;
-    padding: 10px;
+    padding: 5px 15px 5px 15px;
 }
 
 #text-container > h2 {
@@ -383,8 +384,7 @@ button:hover {
 }
 
 
-@media screen and (min-width: 375px) and (max-width: 1337px) and (orientation: portrait) 
- {
+@media screen and (min-width: 375px) and (max-width: 1366px) and (orientation: landscape) {
 
  .text-overlay.active, .card-wrapper  { 
     max-width: 16.6rem;
@@ -408,6 +408,10 @@ button:hover {
     }
 
 
+}
+
+@media screen and (min-width: 375px) and (max-width: 1024px) and (orientation: landscape) {
+   
 }
 
 
